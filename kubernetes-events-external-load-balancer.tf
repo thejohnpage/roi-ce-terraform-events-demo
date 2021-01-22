@@ -15,7 +15,3 @@ resource "kubernetes_service" "events-external-service" {
     type = "LoadBalancer"
   }
 }
-
-output "lb_ip" {
-  value = kubernetes_service.events-external-service.load_balancer_ingress[0].ip
-}

@@ -33,13 +33,6 @@ resource "kubernetes_deployment" "events-internal-deployment" {
           port {
             container_port = 8082
           }
-
-          resources {
-            limits {
-              cpu    = "0.2"
-              memory = "256Mi"
-            }
-          }
         }
       }
     }

@@ -33,13 +33,6 @@ resource "kubernetes_deployment" "events-external-deployment" {
           port {
             container_port = 8080
           }
-
-          resources {
-            limits {
-              cpu    = "0.2"
-              memory = "256Mi"
-            }
-          }
         }
       }
     }
