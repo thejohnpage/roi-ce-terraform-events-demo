@@ -1,8 +1,8 @@
-resource "kubernetes_deployment" "events-internal-deployment" {
+resource "kubernetes_deployment" "events-api-server-deployment" {
   metadata {
-    name = "events-internal-deployment"
+    name = "events-api-server-deployment"
     labels = {
-      App = "events-internal"
+      App = "events-api-server"
     }
     namespace = kubernetes_namespace.events_ns.metadata[0].name
   }
@@ -12,19 +12,19 @@ resource "kubernetes_deployment" "events-internal-deployment" {
     progress_deadline_seconds = 60
     selector {
       match_labels = {
-        App = "events-internal"
+        App = "events-api-server"
       }
     }
     template {
       metadata {
         labels = {
-          App = "events-internal"
+          App = "events-api-server"
         }
       }
       spec {
         container {
-          image = "${var.container_registry}/${var.project_id}/${var.internal_image_name}"
-          name  = "events-internal"
+          image = "${var.container_registry}/${var.project_id}/${var.api-server_image_name}"
+          name  = "events-api-server"
 
           env {
             name  = "GOOGLE_CLOUD_PROJECT"

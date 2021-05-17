@@ -1,11 +1,11 @@
-resource "kubernetes_service" "events-external-service" {
+resource "kubernetes_service" "events-web-server-service" {
   metadata {
-    name      = "events-external-service"
+    name      = "events-web-server-service"
     namespace = kubernetes_namespace.events_ns.metadata[0].name
   }
   spec {
     selector = {
-      App = kubernetes_deployment.events-external-deployment.spec.0.template.0.metadata[0].labels.App
+      App = kubernetes_deployment.events-web-server-deployment.spec.0.template.0.metadata[0].labels.App
     }
     port {
       port        = 80

@@ -5,15 +5,15 @@ variable "project_id" {
 }
 variable "container_registry" {
   type        = string
-  description = "Docker image for external service"
+  description = "Docker image for web-server service"
 }
 
-variable "external_image_name" {
+variable "web-server_image_name" {
   type        = string
-  description = "Docker image for external service"
+  description = "Docker image for web-server service"
 }
 
-variable "internal_image_name" {
+variable "api-server_image_name" {
   type        = string
   description = "Docker image for internal service"
 }
