@@ -23,7 +23,7 @@ resource "kubernetes_deployment" "events-web-server-deployment" {
       }
       spec {
         container {
-          image = "${var.container_registry}/${var.project_id}/${var.web-server_image_name}"
+          image = "${var.container_registry}/${var.project_id}/${var.web-server_image_name}:${var.web-server_image_version}"
           name  = "events-web-server"
 
           env {
