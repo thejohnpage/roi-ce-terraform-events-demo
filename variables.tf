@@ -39,6 +39,11 @@ variable "gcp_zone_1" {
   description = "GCP Zone"
 }
 
+variable "node_machine_type" {
+  type        = string
+  description = "Node Machine Type"
+}
+
 variable "app_name" {
   type        = string
   description = "Application Name"
