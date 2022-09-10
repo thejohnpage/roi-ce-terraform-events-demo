@@ -23,7 +23,7 @@ resource "kubernetes_deployment" "events-api-server-deployment" {
       }
       spec {
         container {
-          image = "${var.container_registry}/${var.project_id}/${var.api-server_image_name}"
+          image = "${var.container_registry}/${var.project_id}/${var.api-server_image_name}:${var.api-server_image_version}"
           name  = "events-api-server"
 
           env {
