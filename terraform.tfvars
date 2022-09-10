@@ -12,6 +12,7 @@ api-server_image_version = "v1.0.0"
 
 gcp_region_1 = "us-central1"
 gcp_zone_1   = "us-central1-c"
+node_machine_type = "es-small"
 
 # Application Name (used in resource names, no spaces.)
 app_name = "ce-events"
