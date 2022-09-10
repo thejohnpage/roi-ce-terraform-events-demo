@@ -5,17 +5,27 @@ variable "project_id" {
 }
 variable "container_registry" {
   type        = string
-  description = "Docker image for web-server service"
+  description = "Container Registry for Docker image for web-server service"
 }
 
 variable "web-server_image_name" {
   type        = string
-  description = "Docker image for web-server service"
+  description = "Docker image name for web-server service"
+}
+
+variable "web-server_image_version" {
+  type        = string
+  description = "Docker image version tag for web-server service"
 }
 
 variable "api-server_image_name" {
   type        = string
   description = "Docker image for internal service"
+}
+
+variable "api-server_image_version" {
+  type        = string
+  description = "Docker image version tag for api-server service"
 }
 
 variable "gcp_region_1" {
