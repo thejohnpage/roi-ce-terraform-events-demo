@@ -7,7 +7,7 @@ variable "container_registry" {
   type        = string
   description = "Container Registry for Docker image for web-server service"
   validation {
-    condition = var.container_registry == 'gcr' || var.container_registry == 'docker'
+    condition = var.container_registry == "gcr" || var.container_registry == "docker"
     error_message = "The container registry must be either gcr or docker (lower case)"
   }
 }

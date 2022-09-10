@@ -23,7 +23,7 @@ resource "kubernetes_deployment" "events-api-server-deployment" {
       }
       spec {
         container {
-          image = var.container_registry == 'gcr' ? "gcr.io/${var.gcp_project_id}/${var.api-server_image_name}:${var.api-server_image_version}" : "${var.registry_id}/${var.api-server_image_name}:${var.api-server_image_version}"
+          image = var.container_registry == "gcr" ? "gcr.io/${var.gcp_project_id}/${var.api-server_image_name}:${var.api-server_image_version}" : "${var.registry_id}/${var.api-server_image_name}:${var.api-server_image_version}"
           name  = "events-api-server"
 
           env {
