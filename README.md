@@ -22,10 +22,10 @@ terraform apply -auto-approve
 ## The followng will be created:
 GKE Cluster
 Kubernetes namespace
-Kubernetes deployment for internal service
-Kubernetes deployment for external service
-Kubernetes load balancer for external
-ClusterIP for internal
+Kubernetes deployment for api-server service
+Kubernetes deployment for web-server service
+Kubernetes load balancer for web-server with external IP address
+ClusterIP for api-server
 
 The public IP of the load balancer will be in the outputt when done
 
