@@ -5,7 +5,7 @@ resource "google_container_cluster" "gke-cluster" {
 
   node_config {
     preemptible  = true
-    machine_type = "n1-standard-1"
+    machine_type = var.node_machine_type
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform",
     ]
