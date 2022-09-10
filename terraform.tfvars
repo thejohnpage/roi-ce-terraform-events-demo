@@ -8,7 +8,7 @@ api-server_image_version = "v1.0.0"
 
 # The image used by the deployments will be a URL created from 
 # combining the above vars. For Example: 
-# container_registry/project_id/web-server_image_name
+# container_registry/project_id/web-server_image_name:web-server_image_version
 
 gcp_region_1 = "us-central1"
 gcp_zone_1   = "us-central1-c"
